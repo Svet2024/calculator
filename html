@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор солнечных панелей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-container">
+        <h1>Калькулятор комплекта самопотребления</h1>
+        <hr>
+    </div>    
+    <div class="container">
+        <section class="input-section">
+            <h2>Введите свои данные</h2>
+            <div class="bill-amount-display">
+                <span id="bill-value">239 €/месяц</span>
+            <div>
+                <label for="monthly-bill">Ежемесячный счет за электроэнергию:</label>
+                <input type="range" id="monthly-bill" name="monthly-bill" min="50" max="400" value="100">
+            </div>
+            <div>
+                <label for="phase-type">Тип сети:</label>
+                <select id="phase-type" name="phase-type">
+                    <option value="single">Монофазная</option>
+                    <option value="three">Трехфазная</option>
+                </select>
+            </div>
+            <div>
+                <label for="roof-type">Тип крыши:</label>
+                <select id="roof-type" name="roof-type">
+                    <option value="pitched">Наклонная</option>
+                    <option value="flat">Плоская</option>
+                </select>
+            </div>
+            <div>
+                <label for="battery-type">Добавить батарею:</label>
+                <select id="battery-type" name="battery-type">
+            <div>
+            </select>
+                 <label for="panel-type">Тип панелей:</label>
+                <select id="panel-type" name="panel-type">
+                            <!-- Опции добавляются через JavaScript -->
+                        </select>
+                    </div>
+                </select>
+            </div>
+            <div class="results-container">
+        </section>
+        <section class="output-section">
+            <h2 class="results-heading">Результаты расчета</h2>
+<div class="data-section">
+<h3 class="data-title">Данные системы</h3>
+<p id="system-power">Мощность системы: <span class="data-value"></span> W</p>
+<p id="system-cost">Стоимость системы: <span class="data-value"></span> €</p>
+<p id="energy-generation"> <span id="average-energy"></span></p>
+<p id="energy-consumption">Сколько из произведённой энергии вы потребите: <span class="data-value" id="consumption-value"></span>%</p>
+<p id="annual-savings">Годовая экономия: <span class="data-value" id="savings-value"></span> €</p>
+</div>
+<div class="components-section">
+<h3 class="components-title">Комплектация</h3>
+<p id="panels-name">Панели: <span class="components-value"></span></p>
+<p id="panels-info">Количество панелей: <span class="components-value"></span> штук</p>
+<p id="inverter-info">Инвертор: <span class="components-value"></span></p>
+<p id="battery-info">Батарея: <span class="components-value"></span></p>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
