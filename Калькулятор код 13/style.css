@@ -1,0 +1,265 @@
+/* Базовые стили */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+.header-container {
+    text-align: center;
+    padding: 20px;
+    background: #fff; /* Или другой цвет фона, если это необходимо */
+}
+
+.header-container h1 {
+    margin: 0;
+    padding-bottom: 10px; /* Расстояние до черты */
+    color: #1D2B50; /* Темно-синий цвет текста, если он подходит под вашу цветовую схему */
+    font-size: 28px; /* Или любой другой размер, который вы считаете подходящим */
+}
+.results-heading {
+    font-size: 22px; /* Размер шрифта заголовка результатов расчета */
+    font-weight: bold; /* Сделать текст заголовка полужирным */
+    margin-bottom: 10px;
+}
+
+.data-title, .components-title {
+    font-weight: bold; /* Сделать текст заголовков полужирным */
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.data-value, .components-value {font-weight: normal; /* Сделать текст значений полужирным */
+}
+.data-value {
+    font-size: 18px; /* Пример размера шрифта, подходящего для вашего дизайна */
+    /* Другие стили, если они нужны */
+}
+.data-section, .components-section {
+margin-bottom: 20px;
+}
+#average-energy {
+    font-weight: normal; /* Убедитесь, что текст не жирный */
+    /* Другие стили, если они нужны, например, размер шрифта */
+}
+#energy-consumption {
+    font-size: 18px; /* Установите размер шрифта, соответствующий остальным элементам */
+}
+#annual-savings {
+    font-size: 18px; /* Размер шрифта для соответствия остальным данным */
+    /* Другие стили, если нужны */
+}
+#annual-savings .data-value {
+    font-weight: normal; /* Сбросить жирность текста */
+    font-size: 18px; /* Установить размер шрифта, соответствующий остальным данным */
+}
+/* Стиль для значения потребления энергии */
+#consumption-value {
+    font-weight: normal; /* Если значение должно быть не жирным */
+}
+#system-power, #system-cost, #inverter-info, #panels-info, #battery-info, #average-energy   {
+font-size: 18px; /* Соответствует размеру шрифта для "Мощность системы: " */
+}
+.components-title {
+    font-size: 22px; /* Размер шрифта для заголовков комплектации */
+}
+
+.components-value {
+    font-size: 18px; /* Размер шрифта для значений комплектации */
+}
+
+/* Дополнительные стили для элементов, если это необходимо /
+.data-value, .components-value {
+/ Стили для значений внутри каждого пункта, если нужно их выделить */
+
+
+.header-container hr {
+    border: 0;
+    height: 3px; /* Толщина линии */
+    background-image: linear-gradient(to right, transparent, #E88F00, transparent);
+    margin: 0; /* Убрать стандартные отступы */
+}
+.bill-amount-display {
+    text-align: center; /* Выравнивание по центру */
+    margin-bottom: 10px; /* Отступ снизу до ползунка */
+}
+
+#bill-value {
+    font-size: 24px; /* Увеличенный размер текста */
+    color: #E88F00; /* Оранжевый цвет текста */
+    font-weight: bold; /* Жирный шрифт */
+    display: inline-block; /* Для применения текстового выравнивания */
+    margin: 0 auto; /* Автоматические отступы для выравнивания */
+}
+
+/* Стилизация контейнера калькулятора */
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Обрезка для радиуса границы */
+}
+
+/* Секции ввода и вывода */
+.input-section, .output-section {
+    flex-basis: 50%; /* Занимают по половине ширины контейнера */
+    padding: 20px;
+}
+
+/* Стили для заголовков и текста */
+h1, h2, h3, p {
+    color: #1D2B50; /* Темно-синий цвет текста */
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #E88F00; /* Акцентный оранжевый цвет */
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Стили для формы и элементов ввода */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="range"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+input[type="range"] {
+    -webkit-appearance: none; /* Сброс стандартного вида для WebKit */
+    width: 100%; /* Полная ширина контейнера */
+    background: transparent; /* Прозрачный фон */
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    background: #ddd; /* Серый фон дорожки */
+    border-radius: 4px;
+    border: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Сброс стандартного вида для WebKit */
+    border: none;
+    height: 20px; /* Высота ползунка */
+    width: 20px; /* Ширина ползунка */
+    border-radius: 50%; /* Круглый ползунок */
+    background: #E88F00; /* Оранжевый цвет ползунка */
+    margin-top: -6px; /* Смещение для выравнивания по центру дорожки */
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2); /* Тень для ползунка */
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+    border: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+    border: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #E88F00;
+    cursor: pointer;
+}
+
+/* Стили для IE */
+input[type="range"]::-ms-track {
+    width: 100%;
+    height: 8px;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+    background: #ddd;
+    border-radius: 4px;
+}
+
+input[type="range"]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 4px;
+}
+
+input[type="range"]::-ms-thumb {
+    border: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #E88F00;
+    cursor: pointer;
+    margin-top: 0;
+}
+
+/* Стили для заполнения слева от ползунка */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #1D2B50 0%, #1D2B50 100%); /* Синий цвет заполнения */
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #1D2B50;
+}
+
+input[type="range"]::-moz-range-progress {
+    background: #1D2B50; /* Синий цвет заполнения для Firefox */
+    border-radius: 4px;
+    }
+    
+    input[type="range"]::-ms-fill-lower {
+    background: #1D2B50; /* Синий цвет заполнения для IE */
+    }
+
+/* Стили для кнопок */
+button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #E88F00; /* Акцентный оранжевый цвет */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cc7a00; /* Темный оттенок оранжевого цвета */
+}
+
+/* Адаптивный дизайн для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .input-section, .results-container {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}
